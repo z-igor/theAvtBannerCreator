@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.f96877cc.chunk.css",
-    "main.js": "/static/js/main.6859d862.chunk.js",
-    "main.js.map": "/static/js/main.6859d862.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a21acbf3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a21acbf3.js.map",
-    "static/css/2.a8317237.chunk.css": "/static/css/2.a8317237.chunk.css",
-    "static/js/2.3bcb44ee.chunk.js": "/static/js/2.3bcb44ee.chunk.js",
-    "static/js/2.3bcb44ee.chunk.js.map": "/static/js/2.3bcb44ee.chunk.js.map",
-    "static/js/3.5060d713.chunk.js": "/static/js/3.5060d713.chunk.js",
-    "static/js/3.5060d713.chunk.js.map": "/static/js/3.5060d713.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.a8317237.chunk.css.map": "/static/css/2.a8317237.chunk.css.map",
-    "static/css/main.f96877cc.chunk.css.map": "/static/css/main.f96877cc.chunk.css.map",
-    "static/js/2.3bcb44ee.chunk.js.LICENSE.txt": "/static/js/2.3bcb44ee.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/alpha-background.60df8847.svg",
-    "static/media/index.scss": "/static/media/picture.4aa12da7.png"
+    "main.css": "/theAvtBannerCreator/static/css/main.fbf6f09a.chunk.css",
+    "main.js": "/theAvtBannerCreator/static/js/main.6859d862.chunk.js",
+    "main.js.map": "/theAvtBannerCreator/static/js/main.6859d862.chunk.js.map",
+    "runtime-main.js": "/theAvtBannerCreator/static/js/runtime-main.6b19c03c.js",
+    "runtime-main.js.map": "/theAvtBannerCreator/static/js/runtime-main.6b19c03c.js.map",
+    "static/css/2.ba4b9947.chunk.css": "/theAvtBannerCreator/static/css/2.ba4b9947.chunk.css",
+    "static/js/2.940ae715.chunk.js": "/theAvtBannerCreator/static/js/2.940ae715.chunk.js",
+    "static/js/2.940ae715.chunk.js.map": "/theAvtBannerCreator/static/js/2.940ae715.chunk.js.map",
+    "static/js/3.5060d713.chunk.js": "/theAvtBannerCreator/static/js/3.5060d713.chunk.js",
+    "static/js/3.5060d713.chunk.js.map": "/theAvtBannerCreator/static/js/3.5060d713.chunk.js.map",
+    "index.html": "/theAvtBannerCreator/index.html",
+    "static/css/2.ba4b9947.chunk.css.map": "/theAvtBannerCreator/static/css/2.ba4b9947.chunk.css.map",
+    "static/css/main.fbf6f09a.chunk.css.map": "/theAvtBannerCreator/static/css/main.fbf6f09a.chunk.css.map",
+    "static/js/2.940ae715.chunk.js.LICENSE.txt": "/theAvtBannerCreator/static/js/2.940ae715.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/theAvtBannerCreator/static/media/alpha-background.60df8847.svg",
+    "static/media/index.scss": "/theAvtBannerCreator/static/media/picture.4aa12da7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a21acbf3.js",
-    "static/css/2.a8317237.chunk.css",
-    "static/js/2.3bcb44ee.chunk.js",
-    "static/css/main.f96877cc.chunk.css",
+    "static/js/runtime-main.6b19c03c.js",
+    "static/css/2.ba4b9947.chunk.css",
+    "static/js/2.940ae715.chunk.js",
+    "static/css/main.fbf6f09a.chunk.css",
     "static/js/main.6859d862.chunk.js"
   ]
 }
