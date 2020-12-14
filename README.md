@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 *Тестовое задание* 
+=======
+*Тестовое задание*
+>>>>>>> 621c0fbcb59121c33e20364afce61dfd4deda354
 
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)*
 
