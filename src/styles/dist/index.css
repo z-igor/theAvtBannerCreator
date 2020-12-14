@@ -1,0 +1,37 @@
+.app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #efefff;
+}
+.app__div {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.app__aside {
+  min-width: 300px;
+  flex-basis: 25%;
+  margin-right: 5px;
+}
+.app__aside, .app__main {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.563);
+}
+.app__main {
+  flex-grow: 1;
+}
+.app__header {
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(to right, skyblue, #d2eeff);
+  padding: 2px 4px;
+  overflow: hidden;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+ }
+*/

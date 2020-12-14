@@ -1,0 +1,68 @@
+.banners {
+  border: 0.1px solid rgb(237, 237, 237);
+
+  .content {
+    height: 100%;
+    // overflow-x: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    // overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    white-space: nowrap;
+    padding: 4px 8px;
+    border: 1px solid rgb(225, 225, 225);
+    border-top: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:focus,
+    &:hover {
+      outline-color: transparent;
+      border-color: rgb(136, 136, 136);
+    }
+
+    p,
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    p {
+      max-width: 140px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    i {
+      color: #888;
+      margin-left: 4px;
+      font-size: 0.8em;
+      user-select: none;
+    }
+
+  }
+
+  &__item-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+  }
+}

@@ -1,0 +1,58 @@
+body {
+  background: $bgApp;
+}
+
+.app {
+  height: 100%;
+
+  max-width: 1366px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: $paddingApp;
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  ul, ol {
+    margin-bottom: 0;
+  }
+
+  &__preview,
+  &__main {
+    min-width: 300px;
+    border-radius: $brRadius;
+
+    overflow: hidden;
+  }
+
+  &__preview {
+    flex-basis: 15%;
+    margin-right: 10px;
+    background-color: $bgAppDiv;
+    border: 0.1px solid rgb(237, 237, 237);
+  }
+
+  &__main {
+    flex-grow: 1;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+ }
+*/

@@ -1,0 +1,37 @@
+.main__creator {
+  flex-grow: 1;
+  background-color: $bgAppDiv;
+  border-radius: $brRadius;
+  margin-right: 10px;
+}
+
+.creator {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 0.1px solid rgb(237, 237, 237);
+  min-width: 300px;
+  overflow: hidden;
+
+  .content {
+    overflow-x: auto;
+  }
+
+  &__form {
+    max-width: 100%;
+  }
+
+  &__picture {
+    input {
+      margin-top: 10px;
+    }
+  }
+}
+
+.main__banners {
+  background-color: $bgAppDiv;
+  border-radius: $brRadius;
+}
+
+.main__banner {
+  display: inline-block;
+}
