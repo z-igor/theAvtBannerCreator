@@ -175,7 +175,7 @@ export default function Preview() {
           </Button>
         </div>
       </section>
-      <div className="canvas-hidden">
+      <div className="visible-hidden">
         <CanvasBanner canvasElm={setCanvasElm} />
       </div>
     </aside>
