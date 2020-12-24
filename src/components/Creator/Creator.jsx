@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Form, Input, Button, Checkbox, Row } from "antd";
+import { Form, Input, Button, Checkbox, Row, Col } from "antd";
 import { useDispatch } from "react-redux";
 
 import UploadFile from "../UploadFile/UploadFile";
@@ -24,6 +24,7 @@ export default function Creator() {
   const [imageUri, setImageUri] = useState();
   const [uploadedImgs, updateUploadedImgs] = useState([]);
   const [resetForm, setResetForm] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [failedForm, setFailedForm] = useState(false);
   const refBannerId = useRef(bannerId);
 
@@ -143,16 +144,24 @@ export default function Creator() {
             </Row>
           </Form.Item>
 
-          <Form.Item
-            name="textColor"
-            label="Цвет текста"
-            getValueFromEvent={(data) => {
-              return data;
-            }}
-          >
-            <ColorPicker onChange={() => {}} setGradient={""} />
-          </Form.Item>
-          {/* end textColor */}
+          <Row wrap={true}>
+            <Col flex="auto">
+              <Form.Item
+                name="textColor"
+                label="Цвет текста"
+                getValueFromEvent={(data) => {
+                  return data;
+                }}
+              >
+                <ColorPicker onChange={() => {}} setGradient={""} />
+              </Form.Item>
+              {/* end textColor */}
+            </Col>
+            <Col flex="auto">
+              <BgPicker />
+              {/* end BgPicker */}
+            </Col>
+          </Row>
 
           <Form.Item
             name="description"
@@ -165,8 +174,6 @@ export default function Creator() {
             />
           </Form.Item>
           {/* end description */}
-
-          <BgPicker />
 
           <UploadFile
             form={form}
@@ -207,40 +214,3 @@ export default function Creator() {
     </section>
   );
 }
-
-/* Старая версия заливки. Для супер-технарей-верстальщиков
-<Form.Item
-  name="bgcolor"
-  label="Заливка"
-  tooltip="Цвета, которые поддерживает css свойство 'background'"
->
-  <Input placeholder="css background: #fff, white, gradients " />
-</Form.Item> */
-/* end bgcolor */
-
-/* const onUpdate = (evt) => {
-    // evt.preventDefault();
-    form.validateFields();
-    let values = form.getFieldsValue();
-    if (values.label && values.label.trim()) {
-      if (typeof values.imageUri === "object") {
-        values.imageUri = imageUri;
-      }
-      values.id = bannerId;
-      Dispatch(updateBannerA(values));
-    }
-  };
-*/
-
-/* <Button
-    type="primary"
-    htmlType="button"
-    onClick={onUpdate}
-    style={{
-      marginRight: "8px",
-    }}
-    disabled={resetForm}
-  >
-    Сохранить
-  </Button>
-*/

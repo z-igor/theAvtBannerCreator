@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Form, message, Radio } from "antd";
+import { Form, Radio } from "antd";
 import ColorPicker from "../ColorPicker/ColorPicker";
 
 export default function BgPicker({ ...props }) {

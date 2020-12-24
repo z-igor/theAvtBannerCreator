@@ -10,7 +10,7 @@ import { DownOutlined, PictureOutlined, SmileTwoTone } from "@ant-design/icons";
 export default function Preview() {
   const htmlRef = useRef();
   const [canvasElm, setCanvasElm] = useState();
-  const { bannerId, bannerData } = useGetBannerInfo();
+  const { bannerData } = useGetBannerInfo();
 
   const onDownloadPng = (e) => {
     message.info(
@@ -107,14 +107,18 @@ export default function Preview() {
 
   const menu = (
     <Menu>
-      <Menu.Item key="1" icon={<PictureOutlined />}>
+      <Menu.Item
+        key="1"
+        icon={<PictureOutlined />}
+        disabled={!bannerData.imageUri}
+      >
         <a href={bannerData.imageUri} target="blank" download="image.png">
           Картинку?
         </a>
       </Menu.Item>
       <Menu.Item key="2" icon={<PictureOutlined />}>
         <a
-          href="#"
+          href="&"
           target="blank"
           onClick={onDownloadPng}
           download="banner.png"

@@ -9,7 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.9.2",
-    "canvas-multiline-text": "^1.0.3",
+    "canvas-txt": "^3.0.0",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-color-gradient-picker": "^0.1.2",
@@ -17,7 +17,6 @@
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
-    "save-svg-as-png": "^1.4.17",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

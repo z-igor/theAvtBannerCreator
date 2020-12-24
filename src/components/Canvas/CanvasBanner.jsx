@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { useGetBannerInfo } from "../../hook";
 import { roundRect } from "../../tools/helpers";
-import * as drawMultilineText from "canvas-multiline-text";
+import canvasTxt from "canvas-txt";
 
 import picture from "../../imgs/picture.png";
 
@@ -14,20 +14,43 @@ export default function CanvasBanner({ canvasElm, ...props }) {
 
   const findLinGradAngle = (str) => str.match(/(\d{1,3})deg/)[1];
 
-  const findPointsAngle = (str, { width, height }) => {
-    let r = (width + height) / 2;
-    let x0 = width / 2;
+  const findPointsAngle = useCallback(function (str, { width, height }) {
+    let r = height;
+    let x0 = width;
     let y0 = 0;
     let angle = findLinGradAngle(str);
 
-    if (angle >= 135 && angle <= 225) {
-      y0 = height;
-    } else {
-      y0 = 0;
+    if (angle === 0 || angle >= 350) {
+      r = height;
     }
 
-    if (angle >= 90) {
-      x0 = width;
+    if (angle >= 90 && angle <= 134) {
+      x0 = 0;
+      y0 = 0;
+      r = height;
+    }
+
+    if (angle >= 135 && angle <= 180) {
+      y0 = height;
+      r = height + 50;
+    }
+
+    if (angle >= 180 && angle <= 225) {
+      x0 = 0;
+      y0 = height;
+      r = height;
+    }
+
+    if (angle >= 225 && angle <= 270) {
+      x0 = 0;
+      y0 = height;
+      r = width;
+    }
+
+    if (angle >= 270 && angle <= 315) {
+      x0 = 0;
+      y0 = 0;
+      r = height + 50;
     }
 
     angle = +((angle / 180) * Math.PI).toFixed(4);
@@ -36,6 +59,31 @@ export default function CanvasBanner({ canvasElm, ...props }) {
     let y1 = Math.floor(y0 + r * Math.cos(+angle));
 
     return { x0, y0, x1, y1, angle };
+  }, []);
+
+  const multilineTxt = (ctx, str, { fontSize = 30, height = 100, ...obj }) => {
+    let y = obj.y - height;
+    let tempStr = str;
+    let maxLength = 60;
+
+    if (obj.isDesc) {
+      maxLength = 110;
+      tempStr = str.slice(0, maxLength);
+    }
+
+    tempStr = str.slice(0, maxLength);
+
+    if (str.length >= maxLength) {
+      tempStr += "...";
+    }
+
+    ctx.fillStyle = obj.color;
+    canvasTxt.align = "left";
+    canvasTxt.lineHeight = height / 3;
+    canvasTxt.fontSize = fontSize;
+    canvasTxt.font = "Roboto, Calibri, sans-serif";
+    canvasTxt.fontWeight = obj.weight;
+    canvasTxt.drawText(ctx, tempStr, obj.x, y, 280, height);
   };
 
   const draw = useCallback(
@@ -74,40 +122,10 @@ export default function CanvasBanner({ canvasElm, ...props }) {
         txt: bannerData.uppercase
           ? bannerData.label.toUpperCase()
           : bannerData.label,
-        _w: function () {
-          return {
-            w: Math.floor(ctx.measureText(this.txt).width),
-            isGt:
-              Math.floor(ctx.measureText(this.txt).width) >= canvas.width - 20,
-          };
-        },
-        _multiline: function () {
-          return drawMultilineText(ctx, this.txt, {
-            rect: {
-              x: 10,
-              y: 10,
-              width: canvas.width - 20,
-              height: canvas.height,
-            },
-          });
-        },
-        r: function ({ fontSize = 30, ...obj }) {
-          ctx.font = `500 ${fontSize}px Roboto, Calibri, sans-serif`;
-          ctx.fillStyle = obj.color;
-          ctx.fillText(this.txt, obj.x, obj.y);
-        },
       };
 
       const desc = {
         txt: bannerData.description,
-        w: function () {
-          return Math.floor(ctx.measureText(this.txt).width);
-        },
-        r: function ({ fontSize = 14, ...obj }) {
-          ctx.font = `${fontSize}px Roboto, Calibri, sans-serif`;
-          ctx.fillStyle = obj.color;
-          ctx.fillText(this.txt, obj.x, obj.y);
-        },
       };
 
       ctx.strokeStyle = "transparent";
@@ -117,13 +135,6 @@ export default function CanvasBanner({ canvasElm, ...props }) {
           bannerData.bgcolor.style,
           canvas
         );
-
-        /* lingrad = ctx.createLinearGradient(
-          0 / * x0 * /,
-          0 / * y0 * /,
-          0 / * x1 * /,
-          canvas.height / * y1 * /
-        ); */
 
         lingrad = ctx.createLinearGradient(x0, y0, x1, y1);
 
@@ -156,18 +167,24 @@ export default function CanvasBanner({ canvasElm, ...props }) {
 
       roundRect(ctx, 0, 0, canvas.width, canvas.height, 15, true);
 
-      label.r({
+      multilineTxt(ctx, label.txt, {
         color: bannerData.textColor.style,
         x: 10,
-        y: canvas.height - 60,
+        y: canvas.height - 70,
+        weight: 500,
       });
-      desc.r({
+
+      multilineTxt(ctx, desc.txt, {
+        height: 45,
+        fontSize: 14,
         color: bannerData.textColor.style,
         x: 10,
-        y: canvas.height - 30,
+        y: canvas.height - 20,
+        weight: "normal",
+        isDesc: true,
       });
     },
-    [bannerData]
+    [bannerData, findPointsAngle]
   );
 
   useEffect(() => {
