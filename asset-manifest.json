@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/theAvtBannerCreator/static/css/main.8d2972ba.chunk.css",
-    "main.js": "/theAvtBannerCreator/static/js/main.e16fdf6a.chunk.js",
-    "main.js.map": "/theAvtBannerCreator/static/js/main.e16fdf6a.chunk.js.map",
-    "runtime-main.js": "/theAvtBannerCreator/static/js/runtime-main.94cf7855.js",
-    "runtime-main.js.map": "/theAvtBannerCreator/static/js/runtime-main.94cf7855.js.map",
+    "main.js": "/theAvtBannerCreator/static/js/main.64ae2461.chunk.js",
+    "main.js.map": "/theAvtBannerCreator/static/js/main.64ae2461.chunk.js.map",
+    "runtime-main.js": "/theAvtBannerCreator/static/js/runtime-main.317dae22.js",
+    "runtime-main.js.map": "/theAvtBannerCreator/static/js/runtime-main.317dae22.js.map",
     "static/css/2.7aff7be3.chunk.css": "/theAvtBannerCreator/static/css/2.7aff7be3.chunk.css",
-    "static/js/2.e7465186.chunk.js": "/theAvtBannerCreator/static/js/2.e7465186.chunk.js",
-    "static/js/2.e7465186.chunk.js.map": "/theAvtBannerCreator/static/js/2.e7465186.chunk.js.map",
-    "static/js/3.bf380882.chunk.js": "/theAvtBannerCreator/static/js/3.bf380882.chunk.js",
-    "static/js/3.bf380882.chunk.js.map": "/theAvtBannerCreator/static/js/3.bf380882.chunk.js.map",
+    "static/js/2.cebea422.chunk.js": "/theAvtBannerCreator/static/js/2.cebea422.chunk.js",
+    "static/js/2.cebea422.chunk.js.map": "/theAvtBannerCreator/static/js/2.cebea422.chunk.js.map",
+    "static/js/3.33e90b43.chunk.js": "/theAvtBannerCreator/static/js/3.33e90b43.chunk.js",
+    "static/js/3.33e90b43.chunk.js.map": "/theAvtBannerCreator/static/js/3.33e90b43.chunk.js.map",
     "index.html": "/theAvtBannerCreator/index.html",
     "static/css/2.7aff7be3.chunk.css.map": "/theAvtBannerCreator/static/css/2.7aff7be3.chunk.css.map",
     "static/css/main.8d2972ba.chunk.css.map": "/theAvtBannerCreator/static/css/main.8d2972ba.chunk.css.map",
-    "static/js/2.e7465186.chunk.js.LICENSE.txt": "/theAvtBannerCreator/static/js/2.e7465186.chunk.js.LICENSE.txt",
+    "static/js/2.cebea422.chunk.js.LICENSE.txt": "/theAvtBannerCreator/static/js/2.cebea422.chunk.js.LICENSE.txt",
     "static/media/index.css": "/theAvtBannerCreator/static/media/alpha-background.60df8847.svg",
     "static/media/index.scss": "/theAvtBannerCreator/static/media/picture.4aa12da7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.94cf7855.js",
+    "static/js/runtime-main.317dae22.js",
     "static/css/2.7aff7be3.chunk.css",
-    "static/js/2.e7465186.chunk.js",
+    "static/js/2.cebea422.chunk.js",
     "static/css/main.8d2972ba.chunk.css",
-    "static/js/main.e16fdf6a.chunk.js"
+    "static/js/main.64ae2461.chunk.js"
   ]
 }
